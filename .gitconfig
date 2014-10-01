@@ -1,6 +1,3 @@
-[user]
-	name = Lindsey Smith
-	email = lindseyengineer@gmail.com
 [branch]
 	autosetuprebase = always
 [credential]
@@ -46,3 +43,7 @@
 	smudge = git-media-smudge %f
 [log]
   decorate = short
+[push]
+  default = current
+[pull]
+  default = current
