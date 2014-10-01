@@ -1,0 +1,48 @@
+[user]
+	name = Lindsey Smith
+	email = lindseyengineer@gmail.com
+[branch]
+	autosetuprebase = always
+[credential]
+		helper = osxkeychain
+[core]
+	autocrlf = false
+	safecrlf = warn
+	editor = mate -w
+	autocrl = false
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	p = push
+	pl = pull
+	cl = clone
+	st = status
+	co = checkout
+	ci = commit -m
+	br = branch
+	df = diff
+	cdf = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ll = log --graph --decorate --pretty=oneline --abbrev-commit
+	lla = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	pick = add -p
+	pi = add -p
+	bl = blame
+	nbm = "!f() { git checkout -b $1 master; }; f"
+	nbd = = "!f() { git checkout -b $1 dangezone; }; f"
+	rbm = rebase -i master
+	rbd = rebase -i dangerzone
+	sync = !git pull&&git push
+[color]
+	ui = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[log]
+  decorate = short
