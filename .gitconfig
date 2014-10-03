@@ -37,7 +37,7 @@
 	pi = add -p
 	bl = blame
 	nbm = "!f() { git checkout -b $1 master; }; f"
-	nbd = = "!f() { git checkout -b $1 dangezone; }; f"
+	nbd = "!f() { git checkout -b $1 dangerzone; }; f"
 	rbm = rebase -i master
 	rbd = rebase -i dangerzone
 	sync = !git pull&&git push
