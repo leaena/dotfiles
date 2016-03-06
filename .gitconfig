@@ -1,49 +1,46 @@
-[user]
-	name = Lindsey Smith
-	email = lindseyengineer@gmail.com
-[github]
-	user = leaena
-[branch]
-	autosetuprebase = always
-[credential]
-	helper = osxkeychain
 [core]
-	autocrlf = false
-	safecrlf = warn
-	editor = mate -w
-	autocrl = false
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  excludesfile = /Users/lindsey/.gitignore
+  autocrlf = false
+  safecrlf = warn
+  autocrl = false
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	type = cat-file -t
-	dump = cat-file -p
-	p = push
-	pl = pull
-	cl = clone
-	st = status
-	co = checkout
-	ci = commit -m
-	br = branch
-	df = diff
-	cdf = diff --cached
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-	ll = log --graph --decorate --pretty=oneline --abbrev-commit
-	lla = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ls = ls-files
-	pick = add -p
-	pi = add -p
-	bl = blame
-	nbm = "!f() { git checkout -b $1 master; }; f"
-	rbm = rebase -i master
-	sync = !git pull&&git push
+  co = checkout
+  ci = commit -m
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  p = push
+  pl = pull
+  cl = clone
+  df = diff
+  cdf = diff --cached
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  ll = log --graph --decorate --pretty=oneline --abbrev-commit
+  lla = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  pick = add -p
+  pi = add -p
+  bl = blame
+  nbm = "!f() { git checkout -b $1 master; }; f"
+  rbm = rebase -i master
+  sync = !git pull&&git push
+[github]
+  user = leaena
+  token = <API token> # https://github.com/settings/applications
+  email = lindseyengineer@gmail.com
+[user]
+  name = leaena
+  email = lindseyengineer@gmail.com
 [color]
-	ui = true
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [log]
   	decorate = short
 [push]
